@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MapContainer from './MapContainer'
 import './App.css';
+require('dotenv').config();
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <div className="App-navbar">
+        Future<br/>Home<br/>of a<br/>Navbar
+        </div>
+        <header className="App-map">
+          <MapContainer />
         </header>
       </div>
     );
@@ -26,3 +19,5 @@ class App extends Component {
 }
 
 export default App;
+
+// add redux for navbar connectivity and make searchable/selectable for qualities
